@@ -1,25 +1,6 @@
-// const mongoose = require("mongoose");
-
-// const app = require("./app");
-// const { DB_HOST, PORT } = process.env;
-
-// mongoose.set("strictQuery,true");
-
-// mongoose
-//   .connect(DB_HOST)
-//   .then(() =>
-//     app.listen(PORT, () => {
-//       console.log("Database connection successful");
-//     })
-//   )
-//   .catch((error) => {
-//     console.error(error.message);
-//     process.exit(1);
-//   });
-
 const mongoose = require("mongoose");
 const app = require("./app");
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 const DB_HOST = process.env.DB_HOST;
 
 mongoose
@@ -35,6 +16,6 @@ mongoose
     process.exit(1);
   });
 
-mongoose.disconnect();
+// mongoose.disconnect();
 
 module.exports = mongoose.connection;
